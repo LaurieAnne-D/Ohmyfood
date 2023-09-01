@@ -1,15 +1,11 @@
 {
   "name": "ohmyfood",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass css/style.scss css/style.css --watch"
+    "compile": "sass style/scss/style.scss style/css/style.css --watch"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "sass": "^1.66.1"
-  }
+  "license": "Apache-2.0"
 }
