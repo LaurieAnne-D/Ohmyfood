@@ -1,3 +1,174 @@
+/********** Couleurs **********/
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
 
+/********** Header **********/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__logo {
+  align-items: center;
+  width: 100%;
+  height: 63px;
+  padding: 14px 89px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/********** Search box **********/
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  gap: 17px;
+  background: #EAEAEA;
+}
+.search-box__icon {
+  width: 12px;
+  height: 16px;
+}
+.search-box__text {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  height: 16px;
+  width: 30%;
+}
+
+/********** Hero header **********/
+.hero-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F6F6F6;
+}
+.hero-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 39px;
+  padding-bottom: 16px;
+}
+.hero-header p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+.hero-header__btn {
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 13px 18.75px 13px 18.75px;
+  margin-top: 27px;
+  margin-bottom: 57px;
+}
+
+/********** Functioning section **********/
+.funct {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  gap: 26px;
+  padding-bottom: 68px;
+}
+.funct h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 48px;
+}
+.funct__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.funct__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+  width: 322.486px;
+  height: 72.379px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.funct i {
+  color: #7E7E7E;
+}
+
+/********** Restaurants section **********/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: #F6F6F6;
+  margin-bottom: 66px;
+}
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.restaurants__card img {
+  display: flex;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  width: 346px;
+  height: 231px;
+}
+.restaurants__card figcaption {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  background-color: blueviolet;
+}
+
+/********** Footer **********/
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+  color: #FFFFFF;
+}
+.footer__logo {
+  display: flex;
+  width: 139px;
+  height: 27px;
+  padding-right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__link {
+  color: #FFFFFF;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=style.css.map */
