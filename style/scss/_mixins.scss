@@ -19,14 +19,19 @@
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
+@mixin btn-style-hover {
+    filter: opacity(0.8);
+}
+
 @mixin card-style {
     border-radius: 15px;
-    background-color: blueviolet;
+    background-color: $white-content;
 }
 
 @mixin section-title {
     font-size: 1.5rem;
     font-weight: 700;
+    margin-top: 42px;
 }
 
 @mixin p-style {
@@ -35,4 +40,18 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    color: #000000;
+}
+
+@mixin card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+@mixin icon-gradient {
+        background: -webkit-linear-gradient(0deg, $primary-color, $secondary-color);
+            background: linear-gradient(0deg, $primary-color, $secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 }
