@@ -26,6 +26,7 @@
 @mixin card-style {
     border-radius: 15px;
     background-color: $white-content;
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
 }
 
 @mixin section-title {
@@ -35,8 +36,8 @@
 }
 
 @mixin p-style {
-    font-family: Roboto;
-    font-size: 18px;
+    font-family: 'Roboto';
+    font-size: 1rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -49,9 +50,17 @@
     color: #000000;
 }
 
+@mixin icon-style {
+    padding: 5px;
+    font-size: x-large;
+    color: $black-content;
+    transition: transform 400ms;
+}
+
 @mixin icon-gradient {
-        background: -webkit-linear-gradient(0deg, $primary-color, $secondary-color);
-            background: linear-gradient(0deg, $primary-color, $secondary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(0deg, $primary-color, $secondary-color);
+    background: linear-gradient(0deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
 }

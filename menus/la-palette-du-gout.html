@@ -4,30 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood - La palette du gout</title>
+    <title>Ohmyfood</title>
     <script src="https://kit.fontawesome.com/ccc2c9f9ad.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/css/style.css">
 </head>
 
 <body>
-    <header>
+    <!--Header-->
+    <header class="header header--menu">
         <a href="../index.html">
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="header--menu__icon fa-solid fa-arrow-left"></i>
         </a>
 
-        <img src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+        <img class="header__logo" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
     </header>
 
-    <main>
-        <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+    <!--Main-->
+    <main class="menu-cnt">
+        <img class="menu-cnt__img" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d un plat dans un restaurant">
 
-        <article>
-            <header>
-                <h1>La palette du goût</h1>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
+        <article class="menu-cnt__art">
+            <header class="menu-cnt__art--header">
+                <h1>La palette du goût</h1>
+
+                <figure>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </figure>
             </header>
 
-            <section>
+            <section class="menu-cnt__art--sct">
                 <h2>Entrées</h2>
 
                 <ul>
@@ -39,7 +50,7 @@
 
                         <b>25€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
 
                     <li>
@@ -50,7 +61,7 @@
 
                         <b>35€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
 
                     <li>
@@ -61,12 +72,12 @@
 
                         <b>20€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
                 </ul>
             </section>
 
-            <section>
+            <section class="menu-cnt__art--sct">
                 <h2>Plats</h2>
 
                 <ul>
@@ -78,7 +89,7 @@
 
                         <b>40€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
 
                     <li>
@@ -89,7 +100,7 @@
 
                         <b>35€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
 
                     <li>
@@ -100,12 +111,12 @@
 
                         <b>44€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
                 </ul>
             </section>
 
-            <section>
+            <section class="menu-cnt__art--sct">
                 <h2>Desserts</h2>
                 <ul>
                     <li>
@@ -116,7 +127,7 @@
 
                         <b>18€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
 
                     <li>
@@ -127,7 +138,7 @@
 
                         <b>22€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
 
                     <li>
@@ -138,7 +149,7 @@
 
                         <b>23€</b>
 
-                        <i class="fa-regular fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                     </li>
                 </ul>
             </section>
@@ -147,32 +158,33 @@
         <button>Commander</button>
     </main>
 
-    <footer>
-        <img src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+    <!--Footer-->
+    <footer class="footer">
+        <p class="footer__logo">ohmyfood</p>
 
-        <ul>
+        <ul class="footer__list">
             <li>
-                <a href="#">
+                <a class="footer__link" href="#">
                     <i class="fa-solid fa-utensils"></i>
                     Proposer un restaurant
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a class="footer__link" href="#">
                     <i class="fa-solid fa-handshake-angle"></i>
                     Devenir partenaire
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a class="footer__link" href="#">
                     Mentions légales
                 </a>
             </li>
 
             <li>
-                <a href="mailto:contact@ohmyfood.com">
+                <a class="footer__link" href="mailto:contact@ohmyfood.com">
                     Contact
                 </a>
             </li>

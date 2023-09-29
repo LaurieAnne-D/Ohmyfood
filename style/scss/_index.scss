@@ -15,20 +15,19 @@
 
   &__logo {
     align-items: center;
-    width: 100%;
-    height: 63px;
-    padding: 14px 89px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    padding: 16px;
     position: relative;
   }
 }
 
+/********** Main **********/
 /********** Search box **********/
 .search-box {
   @include flex-center;
   width: 100%;
-  height: 50px;
-  gap: 17px;
+  height: 48px;
+  gap: 16px;
   background: #EAEAEA;
 
   &__icon {
@@ -40,8 +39,7 @@
     background: transparent;
     border: none;
     font-size: 1rem;
-    height: 16px;
-    width: 30%;
+    width: 116px;
   }
 }
 
@@ -59,14 +57,16 @@
 
   p {
     @include p-style;
+    font-size: 1.125rem;
     text-align: center;
+    color: $grey;
   }
 
   &__btn {
     @include btn-style;
-    padding: 13px 18.75px 13px 18.75px;
-    margin-top: 27px;
-    margin-bottom: 57px;
+    padding: 16px 24px;
+    margin-top: 32px;
+    margin-bottom: 56px;
   }
 
   &__btn:hover {
@@ -79,37 +79,37 @@
 .funct {
   @include flex-column;
   background-color: $white-content;
-  gap: 26px;
-  padding-bottom: 68px;
+  gap: 24px;
+  padding-bottom: 64px;
 
   h2 {
     @include section-title;
-    margin-left: 20px;
+    margin-left: 24px;
   }
 
   &__list {
     @include flex-column;
     @include flex-center;
-    gap: 25px;
+    gap: 24px;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    width: 322.486px;
-    height: 72.379px;
+    width: calc(100% - 48px);
+    height: 72px;
     background-color: $main-background;
     border-radius: 20px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
 
     &--icon {
-      margin-right: 27px;
+      margin-right: 24px;
       font-size: larger;
     }
 
     &--nmb {
       position: relative;
-      right: 15px;
+      right: 16px;
       font-size: smaller;
 
       .fa-circle {
@@ -141,9 +141,8 @@
   @include flex-column;
   height: auto;
   background-color: $main-background;
-  padding: 1rem;
-  padding-bottom: 0;
-  padding-top: 0;
+  padding: 0 16px;
+  gap: 24px;
 
   h2 {
     @include section-title;
@@ -153,16 +152,24 @@
     display: flex;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
-    margin: 0 0 66px 0;
-    gap: 1rem;
+    flex-direction: column;
+    margin: 0 0 64px 0;
+    gap: 16px;
+  }
+
+  li {
+    margin: auto;
+  }
+
+  figure {
+    position: relative;
   }
 
   &__label {
     @include flex-center;
-    position: relative;
-    top: 42px;
-    left: 252px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     width: 80px;
     height: 29px;
     background-color: #99E2D0;
@@ -177,7 +184,7 @@
     img {
       display: flex;
       object-fit: cover;
-      border-radius: 15px 15px 0 0;
+      border-radius: 16px 16px 0 0;
       width: 100%;
       height: 174px;
     }
@@ -185,29 +192,28 @@
     figcaption {
       @include flex-column;
       width: 100%;
-      border-radius: 0 0 15px 15px;
+      border-radius: 0 0 16px 16px;
       background-color: $white-content;
-      padding: 1rem;
-      line-height: 1.5rem;
-      height: 4.875rem;
+      padding: 16px;
+      line-height: 24px;
+      height: 78px;
 
       figure {
         position: relative;
-        left: 282px;
+        align-self: end;
+        left: 24px;
         bottom: 36px;
-        width: fit-content;
-        font-size: x-large;
-        color: $black-content;
+        @include icon-style;
 
         .fa-solid {
           position: relative;
-          right: 31.5px;
+          right: 31.7px;
           color: transparent;
         }
-      }
 
-      figure:hover {
+        &:hover {
           @include icon-gradient;
+        }
       }
 
       h3 {
@@ -216,7 +222,6 @@
 
       p {
         @include p-style;
-        font-size: 17px;
       }
     }
   }
@@ -226,7 +231,7 @@
 .footer {
   @include flex-column;
   background-color: $grey;
-  padding: 22px 25px 22px 25px;
+  padding: 24px;
   gap: 16px;
   color: $white-content;
 
@@ -240,11 +245,53 @@
 
   &__list {
     @include flex-column;
-    gap: 7px;
+    gap: 8px;
   }
 
   &__link {
+    @include p-style;
     color: $white-content;
-    font-weight: 500;
+
+    i {
+      margin-right: 8px;
+      font-size: small;
+      width: 16px;
+    }
+  }
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .restaurants {
+    ul {
+      flex-flow: row wrap;
+    }
+  }
+}
+
+/* large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .funct {
+    &__list {
+      flex-direction: row;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  }
+
+  .restaurants {
+    ul {
+      justify-content: center;
+
+      li {
+        margin: 0px;
+        width: calc(100% / 2);
+      }
+
+      &__card {
+        width: 100%;
+      }
+    }
   }
 }

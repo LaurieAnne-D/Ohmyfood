@@ -16,21 +16,20 @@
 }
 .header__logo {
   align-items: center;
-  width: 100%;
-  height: 63px;
-  padding: 14px 89px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  padding: 16px;
   position: relative;
 }
 
+/********** Main **********/
 /********** Search box **********/
 .search-box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50px;
-  gap: 17px;
+  height: 48px;
+  gap: 16px;
   background: #EAEAEA;
 }
 .search-box__icon {
@@ -41,8 +40,7 @@
   background: transparent;
   border: none;
   font-size: 1rem;
-  height: 16px;
-  width: 30%;
+  width: 116px;
 }
 
 /********** Hero header **********/
@@ -61,13 +59,15 @@
   padding-bottom: 16px;
 }
 .hero-header p {
-  font-family: Roboto;
-  font-size: 18px;
+  font-family: "Roboto";
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   color: #000000;
+  font-size: 1.125rem;
   text-align: center;
+  color: #353535;
 }
 .hero-header__btn {
   font-size: 1rem;
@@ -77,9 +77,9 @@
   color: #FFFFFF;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  padding: 13px 18.75px 13px 18.75px;
-  margin-top: 27px;
-  margin-bottom: 57px;
+  padding: 16px 24px;
+  margin-top: 32px;
+  margin-bottom: 56px;
 }
 .hero-header__btn:hover {
   filter: opacity(0.8);
@@ -90,14 +90,14 @@
   display: flex;
   flex-direction: column;
   background-color: #FFFFFF;
-  gap: 26px;
-  padding-bottom: 68px;
+  gap: 24px;
+  padding-bottom: 64px;
 }
 .funct h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 42px;
-  margin-left: 20px;
+  margin-left: 24px;
 }
 .funct__list {
   display: flex;
@@ -105,24 +105,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 24px;
 }
 .funct__item {
   display: flex;
   align-items: center;
-  width: 322.486px;
-  height: 72.379px;
+  width: calc(100% - 48px);
+  height: 72px;
   background-color: #F6F6F6;
   border-radius: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
 }
 .funct__item--icon {
-  margin-right: 27px;
+  margin-right: 24px;
   font-size: larger;
 }
 .funct__item--nmb {
   position: relative;
-  right: 15px;
+  right: 16px;
   font-size: smaller;
 }
 .funct__item--nmb .fa-circle {
@@ -146,9 +146,8 @@
   flex-direction: column;
   height: auto;
   background-color: #F6F6F6;
-  padding: 1rem;
-  padding-bottom: 0;
-  padding-top: 0;
+  padding: 0 16px;
+  gap: 24px;
 }
 .restaurants h2 {
   font-size: 1.5rem;
@@ -159,17 +158,23 @@
   display: flex;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
-  margin: 0 0 66px 0;
-  gap: 1rem;
+  flex-direction: column;
+  margin: 0 0 64px 0;
+  gap: 16px;
+}
+.restaurants li {
+  margin: auto;
+}
+.restaurants figure {
+  position: relative;
 }
 .restaurants__label {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 42px;
-  left: 252px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   width: 80px;
   height: 29px;
   background-color: #99E2D0;
@@ -184,7 +189,7 @@
 .restaurants__card img {
   display: flex;
   object-fit: cover;
-  border-radius: 15px 15px 0 0;
+  border-radius: 16px 16px 0 0;
   width: 100%;
   height: 174px;
 }
@@ -192,23 +197,25 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 16px 16px;
   background-color: #FFFFFF;
-  padding: 1rem;
-  line-height: 1.5rem;
-  height: 4.875rem;
+  padding: 16px;
+  line-height: 24px;
+  height: 78px;
 }
 .restaurants__card figcaption figure {
   position: relative;
-  left: 282px;
+  align-self: end;
+  left: 24px;
   bottom: 36px;
-  width: fit-content;
+  padding: 5px;
   font-size: x-large;
   color: #000000;
+  transition: transform 400ms;
 }
 .restaurants__card figcaption figure .fa-solid {
   position: relative;
-  right: 31.5px;
+  right: 31.7px;
   color: transparent;
 }
 .restaurants__card figcaption figure:hover {
@@ -216,6 +223,7 @@
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
 }
 .restaurants__card figcaption h3 {
   font-size: 18px;
@@ -223,13 +231,12 @@
   color: #000000;
 }
 .restaurants__card figcaption p {
-  font-family: Roboto;
-  font-size: 18px;
+  font-family: "Roboto";
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   color: #000000;
-  font-size: 17px;
 }
 
 /********** Footer **********/
@@ -237,7 +244,7 @@
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  padding: 22px 25px 22px 25px;
+  padding: 24px;
   gap: 16px;
   color: #FFFFFF;
 }
@@ -251,11 +258,225 @@
 .footer__list {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 }
 .footer__link {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000000;
   color: #FFFFFF;
+}
+.footer__link i {
+  margin-right: 8px;
+  font-size: small;
+  width: 16px;
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .restaurants ul {
+    flex-flow: row wrap;
+  }
+}
+/* large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .funct__list {
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .restaurants ul {
+    justify-content: center;
+  }
+  .restaurants ul li {
+    margin: 0px;
+    width: 50%;
+  }
+  .restaurants ul__card {
+    width: 100%;
+  }
+}
+* {
+  font-family: "Roboto", sans-serif, "Shrikhand";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/********** Header **********/
+.header {
+  bottom: 1rem;
+}
+.header--menu {
+  position: relative;
+  max-height: 3.938rem;
+}
+.header--menu__icon {
+  position: relative;
+  top: 2.4rem;
+  right: 9rem;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+/********** Main **********/
+.menu-cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+.menu-cnt__img {
+  width: 100%;
+  height: 17.188rem;
+}
+.menu-cnt__art {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  bottom: 2.5rem;
+  width: 100%;
+  padding: 40px 16px 0 16px;
+  border-radius: 40px 40px 0px 0px;
+  background: #F6F6F6;
+}
+.menu-cnt__art--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-cnt__art--header h1 {
+  font-family: "Shrikhand";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.menu-cnt__art--header figure {
+  position: relative;
+  align-self: end;
+  padding: 5px;
+  font-size: x-large;
+  color: #000000;
+  transition: transform 400ms;
+}
+.menu-cnt__art--header figure .fa-regular {
+  position: absolute;
+  top: 7px;
+}
+.menu-cnt__art--header figure .fa-solid {
+  color: transparent;
+}
+.menu-cnt__art--header figure:hover {
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+}
+.menu-cnt__art--sct {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.menu-cnt__art--sct h2 {
+  width: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+}
+.menu-cnt__art--sct ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.menu-cnt__art--sct ul li {
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+.menu-cnt__art--sct ul li section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-cnt__art--sct ul li section h3 {
+  font-size: 1.125rem;
   font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-cnt__art--sct ul li section p {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000000;
+  font-size: 0.95rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-cnt__art--sct ul li b {
+  align-self: flex-end;
+  padding: 16px 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #353535;
+}
+.menu-cnt__art--sct ul li i {
+  display: none;
+}
+.menu-cnt__art--sct ul li:hover i {
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+  background: #99E2D0;
+  width: 20%;
+  position: relative;
+  border-radius: 0 15px 15px 0;
+  padding: 29px 16px;
+}
+.menu-cnt button {
+  padding: 16px 48px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+.menu-cnt button:hover {
+  filter: opacity(0.8);
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, 768px and up) */
+/* large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .menu-cnt__art {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
