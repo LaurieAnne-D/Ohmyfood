@@ -81,6 +81,7 @@
   background-color: $white-content;
   gap: 24px;
   padding-bottom: 64px;
+  width: 100%;
 
   h2 {
     @include section-title;
@@ -272,25 +273,26 @@
 
 /* large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
-  .funct {
-    &__list {
-      flex-direction: row;
-      margin-left: 100px;
-      margin-right: 100px;
-    }
-  }
+  main {
+    background-color: $main-background;
+    @include flex-column;
+    @include flex-center;
 
-  .restaurants {
-    ul {
-      justify-content: center;
-
-      li {
-        margin: 0px;
-        width: calc(100% / 2);
-      }
-
-      &__card {
+    .funct {
+      &__list {
+        flex-direction: row;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: $white-content;
         width: 100%;
+      }
+    }
+
+    .restaurants {
+      width: 80%;
+
+      ul {
+        flex-flow: row wrap;
       }
     }
   }
