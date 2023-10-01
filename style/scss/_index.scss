@@ -67,12 +67,12 @@
     padding: 16px 24px;
     margin-top: 32px;
     margin-bottom: 56px;
-  }
 
-  &__btn:hover {
-    @include btn-style-hover;
+    &:hover,
+    &:focus {
+      @include btn-style-hover;
+    }
   }
-
 }
 
 /********** Functioning section **********/
@@ -212,7 +212,8 @@
           color: transparent;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           @include icon-gradient;
         }
       }
@@ -294,6 +295,24 @@
       ul {
         flex-flow: row wrap;
       }
+    }
+  }
+
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: end;
+    padding-bottom: 24px;
+
+    &__logo {
+      width: inherit;
+      margin: 16px 24px 16px 56px;
+    }
+
+    &__list {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      padding-top: 8px;
     }
   }
 }
