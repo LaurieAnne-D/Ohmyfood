@@ -7,6 +7,48 @@
   list-style: none;
 }
 
+/****** loarder ***********/
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation: loarder 3s ease reverse forwards;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 21%, rgba(153, 226, 208, 1) 100%);
+  gap: 24px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    li {
+      p {
+        font-family: Shrikhand;
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    font-size: 3.2rem;
+    justify-content: center;
+    animation: spiner 3s linear infinite;
+
+    i {
+      animation: color 3s linear infinite;
+    }
+  }
+}
+
 /********** Header **********/
 .header {
   display: flex;

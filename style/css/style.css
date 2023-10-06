@@ -8,6 +8,42 @@
   list-style: none;
 }
 
+/****** loarder ***********/
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation: loarder 3s ease reverse forwards;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(167deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 21%, rgb(153, 226, 208) 100%);
+  gap: 24px;
+}
+.loader ul {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.loader ul li p {
+  font-family: Shrikhand;
+  font-size: 3.2rem;
+}
+.loader__icons {
+  display: flex;
+  font-size: 3.2rem;
+  justify-content: center;
+  animation: spiner 3s linear infinite;
+}
+.loader__icons i {
+  animation: color 3s linear infinite;
+}
+
 /********** Header **********/
 .header {
   display: flex;
@@ -77,13 +113,14 @@
   color: #FFFFFF;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 200ms linear;
   padding: 16px 24px;
   margin-top: 32px;
   margin-bottom: 56px;
 }
 .hero-header__btn:hover, .hero-header__btn:focus {
   filter: opacity(0.8);
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 /********** Functioning section **********/
@@ -213,7 +250,7 @@
   padding: 5px;
   font-size: x-large;
   color: #000000;
-  transition: transform 400ms;
+  transition: all 400ms ease-in-out;
 }
 .restaurants__card figcaption figure .fa-solid {
   position: relative;
@@ -388,7 +425,7 @@
   padding: 5px;
   font-size: x-large;
   color: #000000;
-  transition: transform 400ms;
+  transition: all 400ms ease-in-out;
 }
 .menu-cnt__art--header figure .fa-regular {
   position: absolute;
@@ -490,13 +527,14 @@
   color: #FFFFFF;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 200ms linear;
   border: none;
   width: fit-content;
   align-self: center;
 }
 .menu-cnt button:hover, .menu-cnt button:focus {
   filter: opacity(0.8);
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 /****** Media queries ***********/
@@ -532,6 +570,31 @@
   }
   .menu-cnt__art {
     width: 70%;
+  }
+}
+/****** Keyframes ***********/
+/****** loarder ***********/
+@keyframes loarder {
+  0% {
+    opacity: 0;
+    z-index: -10;
+  }
+  100% {
+    opacity: 1;
+    z-index: 300;
+  }
+}
+@keyframes spiner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes color {
+  from {
+    color: #9356DC;
+  }
+  to {
+    color: #FF79DA;
   }
 }
 

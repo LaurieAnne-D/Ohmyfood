@@ -17,11 +17,12 @@
     color: $white-content;
     background: linear-gradient(0deg, $primary-color, $secondary-color);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: all 200ms linear;
 }
 
 @mixin btn-style-hover {
     filter: opacity(0.8);
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 @mixin card-style {
@@ -55,7 +56,7 @@
     padding: 5px;
     font-size: x-large;
     color: $black-content;
-    transition: transform 400ms;
+    transition: all 400ms ease-in-out;
 }
 
 @mixin icon-gradient {

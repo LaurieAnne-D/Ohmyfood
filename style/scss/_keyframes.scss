@@ -1,0 +1,29 @@
+/****** Keyframes ***********/
+/****** loarder ***********/
+@keyframes loarder {
+    0% {
+        opacity: 0;
+        z-index: -10;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 300;
+    }
+}
+
+@keyframes spiner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color {
+    from {
+        color: $primary-color;
+    }
+
+    to {
+        color: $secondary-color;
+    }
+}
