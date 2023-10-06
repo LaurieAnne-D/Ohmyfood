@@ -27,3 +27,14 @@
         color: $secondary-color;
     }
 }
+
+/****** menu ***********/
+@keyframes cardanim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
