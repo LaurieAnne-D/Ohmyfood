@@ -1,7 +1,7 @@
 * {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: $reset;
+  padding: $reset;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -12,8 +12,8 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
+  left: $reset;
+  top: $reset;
   animation: loarder 3s ease reverse forwards;
   z-index: 1;
   display: flex;
@@ -71,6 +71,7 @@
   height: 48px;
   gap: 16px;
   background: #EAEAEA;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
   &__icon {
     width: 12px;
@@ -197,11 +198,12 @@
     width: 100%;
     flex-direction: column;
     margin: 0 0 64px 0;
-    gap: 16px;
+    gap: $restaurant-margin;
   }
 
   li {
     margin: auto;
+    width: 100%;
   }
 
   figure {
@@ -222,7 +224,6 @@
 
   &__card {
     @include flex-column;
-    width: 346px;
 
     img {
       display: flex;
@@ -308,8 +309,15 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .restaurants {
+    box-sizing: border-box;
+
     ul {
       flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    li {
+      width: calc((100% - $restaurant-margin * 2) / 2);
     }
   }
 }
@@ -322,20 +330,27 @@
     @include flex-center;
 
     .funct {
+      h2 {
+        align-self: center;
+        width: 78%;
+      }
+
       &__list {
         flex-direction: row;
-        padding-left: 100px;
-        padding-right: 100px;
+        align-self: center;
         background-color: $white-content;
-        width: 100%;
+        width: 76%;
       }
     }
 
     .restaurants {
-      width: 80%;
+      width: 79%;
+      padding: $reset;
 
-      ul {
-        flex-flow: row wrap;
+      h2 {
+        width: 100%;
+        align-self: center;
+        padding-left: 16px;
       }
     }
   }
