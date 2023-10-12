@@ -1,0 +1,375 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: $reset;
+  padding: $reset;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/****** loarder ***********/
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: $reset;
+  top: $reset;
+  animation: loarder 3s ease reverse forwards;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 21%, rgba(153, 226, 208, 1) 100%);
+  gap: 24px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    li {
+      p {
+        font-family: Shrikhand;
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    font-size: 3.2rem;
+    justify-content: center;
+    animation: spiner 3s linear infinite;
+
+    i {
+      animation: color 3s linear infinite;
+    }
+  }
+}
+
+/********** Header **********/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    align-items: center;
+    width: 200px;
+    padding: 16px;
+    position: relative;
+  }
+}
+
+/********** Main **********/
+/********** Search box **********/
+.search-box {
+  @include flex-center;
+  width: 100%;
+  height: 48px;
+  gap: 16px;
+  background: #EAEAEA;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+  &__icon {
+    width: 12px;
+    height: 16px;
+  }
+
+  &__text {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    width: 116px;
+  }
+}
+
+/********** Hero header **********/
+.hero-header {
+  @include flex-center;
+  flex-direction: column;
+  background-color: $main-background;
+
+  h1 {
+    @include section-title;
+    text-align: center;
+    padding-bottom: 16px;
+  }
+
+  p {
+    @include p-style;
+    font-size: 1.125rem;
+    text-align: center;
+    color: $grey;
+  }
+
+  &__btn {
+    @include btn-style;
+    padding: 16px 24px;
+    margin-top: 32px;
+    margin-bottom: 56px;
+
+    &:hover,
+    &:focus {
+      @include btn-style-hover;
+    }
+  }
+}
+
+/********** Functioning section **********/
+.funct {
+  @include flex-column;
+  background-color: $white-content;
+  gap: 24px;
+  padding-bottom: 64px;
+  width: 100%;
+
+  h2 {
+    @include section-title;
+    margin-left: 24px;
+  }
+
+  &__list {
+    @include flex-column;
+    @include flex-center;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 48px);
+    height: 72px;
+    background-color: $main-background;
+    border-radius: 20px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+
+    &--icon {
+      margin-right: 24px;
+      font-size: larger;
+    }
+
+    &--nmb {
+      position: relative;
+      right: 16px;
+      font-size: smaller;
+
+      .fa-circle {
+        color: $primary-color;
+      }
+
+      .fa-1,
+      .fa-2,
+      .fa-3 {
+        color: $white-content;
+      }
+    }
+  }
+
+  i {
+    color: $second-grey;
+  }
+
+  &__item:hover {
+    .funct__item--icon {
+      color: $primary-color;
+    }
+  }
+}
+
+
+/********** Restaurants section **********/
+.restaurants {
+  @include flex-column;
+  height: auto;
+  background-color: $main-background;
+  padding: 0 16px;
+  gap: 24px;
+
+  h2 {
+    @include section-title;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 0 64px 0;
+    gap: $restaurant-margin;
+  }
+
+  li {
+    margin: auto;
+    width: 100%;
+  }
+
+  figure {
+    position: relative;
+  }
+
+  &__label {
+    @include flex-center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 29px;
+    background-color: #99E2D0;
+    color: #008766;
+    border-radius: 2px;
+  }
+
+  &__card {
+    @include flex-column;
+
+    img {
+      display: flex;
+      object-fit: cover;
+      border-radius: 16px 16px 0 0;
+      width: 100%;
+      height: 174px;
+    }
+
+    figcaption {
+      @include flex-column;
+      width: 100%;
+      border-radius: 0 0 16px 16px;
+      background-color: $white-content;
+      padding: 16px;
+      line-height: 24px;
+      height: 78px;
+
+      figure {
+        position: relative;
+        align-self: end;
+        left: 24px;
+        bottom: 36px;
+        @include icon-style;
+
+        .fa-solid {
+          position: relative;
+          right: 31.7px;
+          color: transparent;
+        }
+
+        &:hover,
+        &:focus {
+          @include icon-gradient;
+        }
+      }
+
+      h3 {
+        @include card-title;
+      }
+
+      p {
+        @include p-style;
+      }
+    }
+  }
+}
+
+/********** Footer **********/
+.footer {
+  @include flex-column;
+  background-color: $grey;
+  padding: 24px;
+  gap: 16px;
+  color: $white-content;
+
+  &__logo {
+    display: flex;
+    width: 30%;
+    color: $white-content;
+    font-family: 'Shrikhand';
+    font-size: 1.1rem;
+  }
+
+  &__list {
+    @include flex-column;
+    gap: 8px;
+  }
+
+  &__link {
+    @include p-style;
+    color: $white-content;
+
+    i {
+      margin-right: 8px;
+      font-size: small;
+      width: 16px;
+    }
+  }
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .restaurants {
+    box-sizing: border-box;
+
+    ul {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    li {
+      width: calc((100% - $restaurant-margin * 2) / 2);
+    }
+  }
+}
+
+/* large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  main {
+    background-color: $main-background;
+    @include flex-column;
+    @include flex-center;
+
+    .funct {
+      h2 {
+        align-self: center;
+        width: 78%;
+      }
+
+      &__list {
+        flex-direction: row;
+        align-self: center;
+        background-color: $white-content;
+        width: 76%;
+      }
+    }
+
+    .restaurants {
+      width: 79%;
+      padding: $reset;
+
+      h2 {
+        width: 100%;
+        align-self: center;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: end;
+    padding-bottom: 24px;
+
+    &__logo {
+      width: inherit;
+      margin: 16px 24px 16px 56px;
+    }
+
+    &__list {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      padding-top: 8px;
+    }
+  }
+}
